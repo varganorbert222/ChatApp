@@ -1,15 +1,15 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ChatApp.Areas.Identity.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("OracleConnection");
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<ChatAppIdentityDbContext>();;
 
+var connectionString = builder.Configuration.GetConnectionString("OracleConnection");
 builder.Services.AddDbContext<ChatAppIdentityDbContext>(options =>
     options.UseOracle(connectionString));
-
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ChatAppIdentityDbContext>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
