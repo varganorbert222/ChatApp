@@ -5,7 +5,7 @@ using ChatApp.Areas.Identity.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ChatAppIdentityDbContext>();;
+    .AddEntityFrameworkStores<ChatAppIdentityDbContext>();
 
 var connectionString = builder.Configuration.GetConnectionString("OracleConnection");
 builder.Services.AddDbContext<ChatAppIdentityDbContext>(options =>
