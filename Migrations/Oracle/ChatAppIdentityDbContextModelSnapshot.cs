@@ -3,7 +3,6 @@ using System;
 using ChatApp.Areas.Identity.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Oracle.EntityFrameworkCore.Metadata;
 
@@ -11,11 +10,10 @@ using Oracle.EntityFrameworkCore.Metadata;
 
 namespace ChatApp.Migrations
 {
-    [DbContext(typeof(ChatAppIdentityDbContext))]
-    [Migration("20220425213321_CreateIdentitySchema")]
-    partial class CreateIdentitySchema
+    [DbContext(typeof(ChatAppIdentityOracleDbContext))]
+    partial class ChatAppIdentityDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

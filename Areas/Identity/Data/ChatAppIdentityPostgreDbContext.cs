@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ChatApp.Areas.Identity.Data;
 
-public class ChatAppIdentityDbContext : IdentityDbContext<IdentityUser>
+public class ChatAppIdentityPostgreDbContext : IdentityDbContext<IdentityUser>
 {
-    public ChatAppIdentityDbContext(DbContextOptions<ChatAppIdentityDbContext> options)
+    public ChatAppIdentityPostgreDbContext(DbContextOptions<ChatAppIdentityPostgreDbContext> options)
         : base(options)
     {
     }
