@@ -1,6 +1,6 @@
 //#define MSSQL
-//#define ORACLE
-#define POSTGRESQL
+#define ORACLE
+//#define POSTGRESQL
 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -28,9 +28,28 @@ builder.Services.AddDbContext<ChatAppIdentityOracleDbContext>(options =>
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+// Configure the HTTP request pipeline.
+builder.Services.AddWebOptimizer(pipeline =>
+{
+    pipeline.AddCssBundle(
+        "/styles/stylebundle.css",
+        "node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+        "/wwwroot/css/site.css"
+    ).UseContentRoot();
+
+    pipeline.AddJavaScriptBundle(
+        "/scripts/scriptbundle.js",
+        "node_modules/@popperjs/core/dist/umd/popper.min.js",
+        "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/jquery-validation/dist/jquery.validate.min.js",
+        "node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
+        "/wwwroot/js/site.js"
+    ).UseContentRoot();
+});
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
@@ -39,6 +58,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseWebOptimizer();
 app.UseStaticFiles();
 
 app.UseRouting();
