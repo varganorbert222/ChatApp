@@ -18,13 +18,13 @@ var builder = WebApplication.CreateBuilder(args);
 //     builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
 //         .AddEntityFrameworkStores<ChatAppIdentityPostgreDbContext>();
 //     builder.Services.AddDbContext<ChatAppIdentityPostgreDbContext>(options =>
-//         options.UseOracle(builder.Configuration.GetConnectionString("PostgreSQLConnection")));
+//         options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQLConnection")));
 // }
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
         .AddEntityFrameworkStores<ChatAppIdentityPostgreDbContext>();
 builder.Services.AddDbContext<ChatAppIdentityPostgreDbContext>(options =>
-    options.UseOracle(builder.Configuration.GetConnectionString("PostgreSQLConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQLConnection")));
 
 // Add services to the container.
 builder.Services.AddRazorPages();
