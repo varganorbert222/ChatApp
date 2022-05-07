@@ -46,6 +46,12 @@ builder.Services.AddWebOptimizer(pipeline =>
         "node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
         "/wwwroot/js/site.js"
     ).UseContentRoot();
+
+    pipeline.AddCssBundle(
+        "/styles/iconbundle.css",
+        "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2",
+        "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+    ).UseContentRoot();
 });
 
 var app = builder.Build();
