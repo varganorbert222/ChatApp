@@ -294,8 +294,6 @@ obj/Debug/net6.0/refint/ChatApp.dll
 obj/Debug/net6.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
 obj/Debug/net6.0/scopedcss/bundle/ChatApp.styles.css
 obj/Debug/net6.0/scopedcss/projectbundle/ChatApp.bundle.scp.css
-.vscode/launch.json
-.vscode/tasks.json
 node_modules/.package-lock.json
 node_modules/@popperjs/core/index.d.ts
 node_modules/@popperjs/core/LICENSE.md
