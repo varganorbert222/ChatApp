@@ -35,7 +35,8 @@ builder.Services.AddWebOptimizer(pipeline =>
         "/styles/stylebundle.css",
         "node_modules/bootstrap/dist/css/bootstrap.min.css",
         "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-        "/wwwroot/css/site.css"
+        "/wwwroot/css/site.css",
+        "/wwwroot/css/messages.css"
     ).UseContentRoot();
 
     pipeline.AddJavaScriptBundle(

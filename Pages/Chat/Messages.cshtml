@@ -7,16 +7,26 @@
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-<div class="container">
-    <div class="card chat-app">
-        <div id="plist" class="people-list">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-search"></i></span>
-                </div>
-                <input type="text" class="form-control" placeholder="Search...">
-
+<div class="row chat-app">
+    <div class="col-2">
+        <div class="row align-items-center my-2">
+            <div class="col-4">
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                    <img class="avatar-small" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                </a>
             </div>
+            <div class="col-4 text-center">
+                <h6 class="m-0">Chatek</h6>
+            </div>
+            <div class="col-4 text-end">
+                <a href="javascript:void(0);" class="btn btn-icon"><i class="bi bi-pencil-square"></i></a>
+            </div>
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Keresés..." aria-label="Search"
+                aria-describedby="search-input">
+        </div>
+        <div id="plist" class="people-list">
             <ul class="list-unstyled chat-list mt-2 mb-0">
                 <li class="clearfix">
                     <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
@@ -62,28 +72,29 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <div class="col-8 border-start border-end p-0">
         <div class="chat">
-            <div class="chat-header clearfix">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
-                        </a>
-                        <div class="chat-about">
-                            <h6 class="m-b-0">Aiden Chavez</h6>
-                            <small>Last seen: 2 hours ago</small>
+            <div class="chat-header border-bottom clearfix">
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                <img class="avatar-small" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    alt="avatar">
+                            </a>
+                            <h6 class="align-middle m-0 mx-2">Aiden Chavez</h6>
                         </div>
                     </div>
-                    <div class="col-lg-6 hidden-sm text-right">
-                        <a href="javascript:void(0);" class="btn btn-outline-secondary"><i class="fa fa-camera"></i></a>
-                        <a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-image"></i></a>
-                        <a href="javascript:void(0);" class="btn btn-outline-info"><i class="fa fa-cogs"></i></a>
-                        <a href="javascript:void(0);" class="btn btn-outline-warning"><i class="fa fa-question"></i></a>
+                    <div class="col-6 text-end">
+                        <a href="javascript:void(0);" class="btn btn-icon"><i class="bi bi-telephone-fill"></i></a>
+                        <a href="javascript:void(0);" class="btn btn-icon"><i class="bi bi-camera-video-fill"></i></a>
+                        <a href="javascript:void(0);" class="btn btn-icon"><i class="bi bi-three-dots"></i></a>
                     </div>
                 </div>
             </div>
             <div class="chat-history">
-                <ul class="m-b-0">
+                <ul class="mb-0">
                     <li class="clearfix">
                         <div class="message-data text-right">
                             <span class="message-data-time">10:10 AM, Today</span>
@@ -107,13 +118,31 @@
                     </li>
                 </ul>
             </div>
-            <div class="chat-message clearfix">
+            <div class="chat-message d-flex">
+                <a href="javascript:void(0);" class="btn btn-icon mx-1"><i class="bi bi-plus-circle-fill"></i></a>
+                <a href="javascript:void(0);" class="btn btn-icon mx-1"><i class="bi bi-card-image"></i></a>
                 <div class="input-group mb-0">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa fa-send"></i></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Enter text here...">
+                    <input type="text" class="form-control" placeholder="Aa" aria-label="Aa"
+                        aria-describedby="aa-input">
                 </div>
+                <a href="javascript:void(0);" class="btn btn-icon mx-1"><i class="bi bi-emoji-smile-fill"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-2">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-column align-items-center pt-2">
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                        <img class="avatar-large" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                    </a>
+                    <h6 class="align-middle m-0 mx-2">Aiden Chavez</h6>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+
             </div>
         </div>
     </div>
