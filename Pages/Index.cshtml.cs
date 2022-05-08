@@ -1,18 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ChatApp.Areas.Identity.Pages.Account;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ChatApp.Pages;
 
-public class IndexModel : PageModel
+public class IndexModel : LoginModel
 {
-    private readonly ILogger<IndexModel> _logger;
 
-    public IndexModel(ILogger<IndexModel> logger)
-    {
-        _logger = logger;
-    }
 
-    public void OnGet()
+    public IndexModel(SignInManager<IdentityUser> signInManager, ILogger<IndexModel> logger) : base(signInManager, logger)
     {
 
     }
