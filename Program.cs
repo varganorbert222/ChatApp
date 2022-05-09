@@ -35,17 +35,16 @@ builder.Services.AddWebOptimizer(pipeline =>
         "/styles/stylebundle.css",
         "node_modules/bootstrap/dist/css/bootstrap.min.css",
         "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-        "/wwwroot/css/site.css",
-        "/wwwroot/css/messages.css"
+        "wwwroot/css/*"
     ).UseContentRoot();
 
     pipeline.AddJavaScriptBundle(
         "/scripts/scriptbundle.js",
-        "node_modules/@popperjs/core/dist/umd/popper.min.js",
+        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
         "node_modules/jquery/dist/jquery.min.js",
         "node_modules/jquery-validation/dist/jquery.validate.min.js",
         "node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
-        "/wwwroot/js/site.js"
+        "wwwroot/js/*"
     ).UseContentRoot();
 });
 
