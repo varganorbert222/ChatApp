@@ -38,5 +38,13 @@ namespace ChatApp.Areas.Identity.Pages.Account
                 return RedirectToPage();
             }
         }
+
+        public async Task<IActionResult> OnGet()
+        {
+            await _signInManager.SignOutAsync();
+            _logger.LogInformation("User logged out.");
+            string returnUrl = Url.Content("~/");
+            return LocalRedirect(returnUrl);
+        }
     }
 }

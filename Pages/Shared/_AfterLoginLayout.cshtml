@@ -9,31 +9,11 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Chat/Messages"><span class="bi bi-chat-dots-fill"></span></a>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>
-    </header>
     <div class="container-fluid">
-        <main role="main" class="pb-3">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="footer text-muted fixed-bottom pb-3">
-        <div class="container">
-            <div class="text-center">
-                &copy; @DateTime.Now.Year - ChatApp
-            </div>
-        </div>
-    </footer>
 
     <script src="/scripts/scriptbundle.js" asp-append-version="true" defer></script>
 

@@ -23,7 +23,15 @@ input.form-control {
   width: 286px;
   height: 36px !important;
   border-radius: 25px !important;
+  border: none;
   align-self: center;
+  background-color: rgba(0, 0, 0, .05);;
+}
+
+input.form-control:focus {
+  background-color: rgba(0, 0, 0, .05);;
+  border-color: none;
+  box-shadow: none;
 }
 
 .btn.btn-rounded {
