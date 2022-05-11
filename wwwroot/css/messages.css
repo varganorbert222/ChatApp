@@ -44,16 +44,28 @@ html {
     height: 100%;
 }
 
+.accordion-body {
+    padding: 0;
+}
+
 .accordion-item {
     border: none;
 }
 
 .accordion-header {
     border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.2s;
 }
 
 .accordion-header:hover {
-    background-color: rgba(0, 0, 0, .05);;
+    background-color: rgba(0, 0, 0, .05);
+    transition: background-color 0s;
+}
+
+.accordion-header:active {
+    background-color: rgba(0, 0, 0, .1);
+    transition: background-color 0s;
 }
 
 .accordion-item .accordion-button {
@@ -68,12 +80,72 @@ html {
     color: var(--bs-body-color);
 }
 
+button.btn {
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+button.btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0s;
+}
+
+button.btn:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0s;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+button.btn-primary {
+    background-color: #0d6efd;
+    transition: background-color 0.2s;
+}
+
+button.btn-primary:hover {
+    background-color: #4d4dff;
+    transition: background-color 0s;
+}
+
+button.btn-primary:active {
+    background-color: hsl(240, 100%, 45%);
+    transition: background-color 0s;
+}
+
+.btn-check:active+.btn-primary:focus,
+.btn-check:checked+.btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.btn-avatar {
+    border-radius: 18px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+}
+
+.btn-avatar {
+    border-radius: 18px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+}
+
 .btn-icon {
     font-size: large;
     width: 44px;
     height: 44px;
     border-radius: 100%;
     color: #0d6efd;
+    background-color: transparent;
+    transition: background-color 0.2s;
 }
 
 .btn-icon > i {
@@ -82,8 +154,62 @@ html {
 }
 
 .btn-icon:hover {
-    background-color: rgba(0, 0, 0, 0.05);
     color: #0d6efd;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0s;
+}
+
+.btn-profile {
+    padding: 0.2rem;
+}
+
+.btn-accordion {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.btn-accordion i {
+    font-size: large;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    text-align: center;
+    margin-right: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+input:not(:placeholder-shown) .message-input {
+    
+}
+
+input:placeholder-shown .message-input {
+    
+}
+
+.search-input-group {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
+}
+
+.search-input-group input.form-control,
+.search-input-group input.form-control:focus {
+    background-color: transparent;
+}
+
+.search-input-group .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border-top-left-radius: 100% !important;
+    border-bottom-left-radius: 100% !important;
 }
 
 .avatar-small {
@@ -99,6 +225,14 @@ html {
     height: 72px;
 }
 
+.tooltip-inner {
+    box-shadow: 2px 2px 4px 0px rgba(161, 161, 161, 1);
+}
+
+.bs-tooltip-right .arrow::before {
+    box-shadow: 2px 2px 4px 0px rgba(161, 161, 161, 1);
+}
+
 .popover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: none;
@@ -112,18 +246,22 @@ html {
 .popover-menu-list-item {
     display: flex;
     align-items: center;
-    background-color: white;
     height: 44px;
     border-radius: 8px;
     padding-left: 0.5rem;
+    background-color: transparent;
+    transition: background-color 0.2s;
 }
 
 .popover-menu-list-item:hover {
     text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0s;
 }
 
-.popover-menu-list-item:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+.popover-menu-list-item:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0s;
 }
 
 .popover-menu-list-item .circle {
@@ -167,16 +305,24 @@ html {
 .people-list .chat-list li {
     padding: 10px;
     list-style: none;
-    border-radius: 8px
+    border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.2s;
 }
 
 .people-list .chat-list li:hover {
-    background: rgba(0, 0, 0, .05);;
-    cursor: pointer
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .05);
+    transition: background-color 0s;
 }
 
 .people-list .chat-list li.active {
-    background: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.people-list .chat-list li:active {
+    background-color: rgba(0, 0, 0, .1);
+    transition: background-color 0s;
 }
 
 .people-list .chat-list li .name {
@@ -204,7 +350,7 @@ html {
 }
 
 .chat .chat-header {
-    padding: 0.5rem;
+    padding: 0.25rem;
 }
 
 .chat .chat-header .chat-about {

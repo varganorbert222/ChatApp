@@ -17,3 +17,10 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     //do something else cause data-content-id isn't there.
   }
 });
+
+var tooltipTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl);
+});

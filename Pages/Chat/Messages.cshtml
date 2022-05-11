@@ -9,21 +9,24 @@
 
 <div class="chat-app">
     <div class="col-chat-left">
-        <div class="row px-2 mt-2 align-items-center">
+        <div class="row px-2 mt-1 align-items-center">
             <div class="col-4">
-                <a class="avatar-small" href="javascript:void(0);" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="click" data-content-id="id_popover_menu">
+                <button type="button" class="btn btn-avatar" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-offset="10,20" data-bs-trigger="click" data-content-id="id_popover_menu">
                     <img class="avatar-small" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
-                </a>
+                </button>
             </div>
             <div class="col-4 text-center">
                 <h6 class="m-0">Chatek</h6>
             </div>
             <div class="col-4 text-end">
-                <a href="javascript:void(0);" class="btn btn-icon"><i class="bi bi-pencil-square"></i></a>
+                <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" title="Új üzenet írása"><i class="bi bi-pencil-square"></i></button>
             </div>
-            <div class="col-12 input-group my-2">
-                <input type="text" class="form-control" placeholder="Keresés..." aria-label="Search"
-                    aria-describedby="search-input">
+            <div class="col-12">
+                <div class="input-group px-2 my-2 search-input-group">         
+                    <i class="bi bi-search"></i>
+                    <input type="text" class="form-control" placeholder="Keresés..." aria-label="Search"
+                        aria-describedby="search-input">
+                </div>
             </div>
         </div>
         <div id="plist" class="people-list">
@@ -78,18 +81,16 @@
             <div class="chat-header border-bottom clearfix">
                 <div class="row align-items-center">
                     <div class="col-6">
-                        <div class="d-flex align-items-center">
-                            <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
-                                <img class="avatar-small" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                        <button type="button" class="btn btn-profile d-flex align-items-center">
+                            <img class="avatar-small" src="https://bootdey.com/img/Content/avatar/avatar2.png"
                                     alt="avatar">
-                            </a>
                             <h6 class="align-middle m-0 mx-2">Aiden Chavez</h6>
-                        </div>
+                        </button>
                     </div>
                     <div class="col-6 text-end">
-                        <a href="javascript:void(0);" class="btn btn-icon"><i class="bi bi-telephone-fill"></i></a>
-                        <a href="javascript:void(0);" class="btn btn-icon"><i class="bi bi-camera-video-fill"></i></a>
-                        <a href="javascript:void(0);" class="btn btn-icon"><i class="bi bi-three-dots"></i></a>
+                        <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" title="Hanghívás indítása"><i class="bi bi-telephone-fill"></i></button>
+                        <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" title="Videóhívás indítása"><i class="bi bi-camera-video-fill"></i></button>
+                        <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" title="Beszélgetés adatai"><i class="bi bi-three-dots"></i></button>
                     </div>
                 </div>
             </div>
@@ -119,13 +120,19 @@
                 </ul>
             </div>
             <div class="chat-message d-flex pb-2">
-                <a href="javascript:void(0);" class="btn btn-icon mx-1"><i class="bi bi-plus-circle-fill"></i></a>
-                <a href="javascript:void(0);" class="btn btn-icon mx-1"><i class="bi bi-card-image"></i></a>
-                <div class="input-group mb-0">
-                    <input type="text" class="form-control" placeholder="Aa" aria-label="Aa"
+                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" title="Hangfájl küldése"><i class="bi bi-mic-fill"></i></button>
+                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" title="Fájl csatolása"><i class="bi bi-card-image"></i></button>
+                <div class="input-group mb-0 search-input-group">
+                    <input type="text" class="form-control message-input" placeholder="Aa" aria-label="Aa"
                         aria-describedby="aa-input">
+                    <div data-bs-toggle="tooltip" data-bs-title="Hangulatjel kiválasztása">
+                        <a tabindex="0" role="button" class="btn btn-icon" data-bs-toggle="popover" data-bs-placement="top" 
+                        data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_emoji">
+                            <i class="bi bi-emoji-smile-fill"></i>
+                        </a>
+                    </div>
                 </div>
-                <a href="javascript:void(0);" class="btn btn-icon mx-1"><i class="bi bi-emoji-smile-fill"></i></a>
+                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" title="Küldés enterrel"><i class="bi bi-send-fill"></i></button>
             </div>
         </div>
     </div>
@@ -145,48 +152,103 @@
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Chat testreszabása
-                        </button>
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Chat testreszabása
+                            </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
+                            <div class="accordion-body">
+                                <button class="btn btn-accordion" type="button">
+                                    <i class="bi bi-type"></i>
+                                    Becenevek módosítása
+                                </button>
+                                <button class="btn btn-accordion" type="button">
+                                    <i class="bi bi-search"></i>
+                                    Keresés a beszélgetésben
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Médiatartalom és fájlok
-                        </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Médiatartalom és fájlok
+                            </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
+                            <div class="accordion-body">
+                                <button class="btn btn-accordion" type="button">
+                                    <i class="bi bi-images"></i>
+                                    Médiatartalom
+                                </button>
+                                <button class="btn btn-accordion" type="button">
+                                    <i class="bi bi-file-text-fill"></i>
+                                    Fájlok
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Személyes adatok védelme és támogatás
-                        </button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Személyes adatok védelme és támogatás
+                            </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
+                            <div class="accordion-body">
+                                <button class="btn btn-accordion" type="button">
+                                    <i class="bi bi-bell-slash-fill"></i>
+                                    Értesítések némítása
+                                </button>
+                                <button class="btn btn-accordion" type="button">
+                                    <i class="bi bi-slash-circle-fill"></i>
+                                    Üzenetek figyelmen kívül hagyása
+                                </button>
+                                <button class="btn btn-accordion" type="button">
+                                    <i class="bi bi-dash-circle-fill"></i>
+                                    Tiltás
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- loaded popover content -->
-<div id="id_popover_menu" style="display: none">
+<!-- popover menu content -->
+<div id="id_popover_menu" class="d-none">
+    <a href="#" class="popover-menu-list-item">
+        <div class="circle">
+            <i class="bi bi-gear-fill"></i>
+        </div>
+        <span>Beállítások</span>
+    </a> 
+    <hr>
+    <a class="popover-menu-list-item" asp-area="Identity" asp-page="/Account/Manage/Index">
+        <div class="circle">
+            <i class="bi bi-person-fill"></i>
+        </div>
+        <span>Profilom</span>
+    </a>
+    <a class="popover-menu-list-item" href="#">
+        <div class="circle">
+            <i class="bi bi-archive-fill"></i>
+        </div>
+        <span>Archivált chatek</span>
+    </a>
+    <hr>
+    <a class="popover-menu-list-item" asp-area="Identity" asp-page="/Account/Logout">
+        <div class="circle">
+            <i class="bi bi-door-open-fill"></i>
+        </div>
+        <span>Kijelentkezés</span>
+    </a>
+</div>
+
+<!-- popover emoji content -->
+<div id="id_popover_emoji" class="d-none">
     <a href="#" class="popover-menu-list-item">
         <div class="circle">
             <i class="bi bi-gear-fill"></i>
