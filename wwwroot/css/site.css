@@ -2,6 +2,16 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* Safari */
+  -webkit-user-select: none;
+  /* Konqueror HTML */
+  -khtml-user-select: none;
+  /* Firefox */
+  -moz-user-select: none;
+  /* Internet Explorer/Edge */
+  -ms-user-select: none;
+  /* Chrome and Opera */
+  user-select: none;
 }
 
 @font-face {

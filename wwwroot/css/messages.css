@@ -15,8 +15,21 @@ html {
     flex-wrap: nowrap;
 }
 
+.chat-app .chat-history * {
+    /* Safari */
+    -webkit-user-select: text;
+    /* Konqueror HTML */
+    -khtml-user-select: text;
+    /* Firefox */
+    -moz-user-select: text;
+    /* Internet Explorer/Edge */
+    -ms-user-select: text;
+    /* Chrome and Opera */
+    user-select: text;
+}
+
 .col-chat-left {
-    min-width: 220px;
+    min-width: 360px;
     max-width: 360px;
     padding-right: 5px;
     margin-left: -7px;
@@ -131,17 +144,14 @@ button.btn-primary:active {
     padding: 0;
 }
 
-.btn-avatar {
-    border-radius: 18px;
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-size: large;
     width: 36px;
     height: 36px;
-    padding: 0;
-}
-
-.btn-icon {
-    font-size: large;
-    width: 44px;
-    height: 44px;
     border-radius: 100%;
     color: #0d6efd;
     background-color: transparent;
@@ -183,6 +193,26 @@ button.btn-primary:active {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+.btn-float {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white !important;
+    box-shadow: 2px 2px 4px 0px rgba(161, 161, 161, 1);
+    
+}
+
+.btn-float:hover {
+    background-color: rgba(240, 240, 240, 1) !important;
+}
+
+.container-btn-float {
+    
+}
+
 input:not(:placeholder-shown) .message-input {
     
 }
@@ -191,10 +221,16 @@ input:placeholder-shown .message-input {
     
 }
 
+.chat-message {
+    display: flex;
+    align-items: center;
+}
+
 .search-input-group {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 25px;
+    height: 36px;
 }
 
 .search-input-group input.form-control,
@@ -206,10 +242,12 @@ input:placeholder-shown .message-input {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 44px;
-    width: 44px;
+    height: 36px;
+    width: 36px;
     border-top-left-radius: 100% !important;
     border-bottom-left-radius: 100% !important;
+    border-top-right-radius: 100% !important;
+    border-bottom-right-radius: 100% !important;
 }
 
 .avatar-small {
@@ -283,6 +321,22 @@ input:placeholder-shown .message-input {
     padding-right: 1rem;
 }
 
+.people-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.people-list li .container-btn-float {
+    display: none;
+}
+
+.people-list li:hover .container-btn-float {
+    display: inline;
+    position: absolute;
+    left: 300px;
+}
 
 /* Innen a sablon következik */
 .card {
@@ -464,15 +518,6 @@ input:placeholder-shown .message-input {
 
 .float-right {
     float: right
-}
-
-.clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0
 }
 
 /* @media only screen and (max-width: 767px) {

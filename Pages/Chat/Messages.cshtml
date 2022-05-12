@@ -5,24 +5,22 @@
     Layout = "_AfterLoginLayout";
 }
 
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-
 <div class="chat-app">
     <div class="col-chat-left">
-        <div class="row px-2 mt-1 align-items-center">
+        <div class="row px-2 mt-2 align-items-center">
             <div class="col-4">
-                <button type="button" class="btn btn-avatar" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-offset="10,20" data-bs-trigger="click" data-content-id="id_popover_menu">
+                <button type="button" class="btn btn-avatar" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_menu">
                     <img class="avatar-small" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
                 </button>
             </div>
             <div class="col-4 text-center">
                 <h6 class="m-0">Chatek</h6>
             </div>
-            <div class="col-4 text-end">
-                <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" title="Új üzenet írása"><i class="bi bi-pencil-square"></i></button>
+            <div class="col-4">
+                <button type="button" class="btn btn-icon float-right" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Új üzenet írása"><i class="bi bi-pencil-square"></i></button>
             </div>
             <div class="col-12">
-                <div class="input-group px-2 my-2 search-input-group">         
+                <div class="input-group px-2 mt-3 mb-2 search-input-group">         
                     <i class="bi bi-search"></i>
                     <input type="text" class="form-control" placeholder="Keresés..." aria-label="Search"
                         aria-describedby="search-input">
@@ -31,46 +29,92 @@
         </div>
         <div id="plist" class="people-list">
             <ul class="list-unstyled chat-list mt-2 mb-0">
-                <li class="clearfix">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
-                    <div class="about">
-                        <div class="name">Vincent Porter</div>
-                        <div class="status"> <i class="fa fa-circle offline"></i> left 7 mins ago </div>
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Vincent Porter</div>
+                            <div class="status"> <i class="bi bi-circle-fill offline"></i> left 7 mins ago </div>
+                        </div>
+                    </div>
+                    
+                    <div class="container-btn-float">
+                        <button type="button" class="btn btn-float">
+                            <i class="bi bi-three-dots"></i>
+                        </button>
                     </div>
                 </li>
-                <li class="clearfix active">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
-                    <div class="about">
-                        <div class="name">Aiden Chavez</div>
-                        <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                <li class="active">
+                    <div class="d-flex align-items-center">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Aiden Chavez</div>
+                            <div class="status"> <i class="bi bi-circle-fill online"></i> online </div>
+                        </div>
+                    </div>
+
+                    <div class="container-btn-float">
+                        <button type="button" class="btn btn-float">
+                            <i class="bi bi-three-dots"></i>
+                        </button>
                     </div>
                 </li>
-                <li class="clearfix">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
-                    <div class="about">
-                        <div class="name">Mike Thomas</div>
-                        <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Mike Thomas</div>
+                            <div class="status"> <i class="bi bi-circle-fill online"></i> online </div>
+                        </div>
+                    </div>
+                    <div class="container-btn-float">
+                        <button type="button" class="btn btn-float">
+                            <i class="bi bi-three-dots"></i>
+                        </button>
                     </div>
                 </li>
-                <li class="clearfix">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
-                    <div class="about">
-                        <div class="name">Christian Kelly</div>
-                        <div class="status"> <i class="fa fa-circle offline"></i> left 10 hours ago </div>
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Christian Kelly</div>
+                            <div class="status"> <i class="bi bi-circle-fill offline"></i> left 10 hours ago </div>
+                        </div>
+                    </div>
+                    <div class="container-btn-float">
+                        <button type="button" class="btn btn-float">
+                            <i class="bi bi-three-dots"></i>
+                        </button>
                     </div>
                 </li>
-                <li class="clearfix">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="avatar">
-                    <div class="about">
-                        <div class="name">Monica Ward</div>
-                        <div class="status"> <i class="fa fa-circle online"></i> online </div>
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Monica Ward</div>
+                            <div class="status"> <i class="bi bi-circle-fill online"></i> online </div>
+                        </div>
+                    </div>
+
+                    <div class="container-btn-float">
+                        <button type="button" class="btn btn-float">
+                            <i class="bi bi-three-dots"></i>
+                        </button>
                     </div>
                 </li>
-                <li class="clearfix">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
-                    <div class="about">
-                        <div class="name">Dean Henry</div>
-                        <div class="status"> <i class="fa fa-circle offline"></i> offline since Oct 28 </div>
+                <li>
+                    <div class="d-flex align-items-center">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">Dean Henry</div>
+                            <div class="status"> <i class="bi bi-circle-fill offline"></i> offline since Oct 28 </div>
+                        </div>
+                    </div>
+
+                    <div class="container-btn-float">
+                        <button type="button" class="btn btn-float">
+                            <i class="bi bi-three-dots"></i>
+                        </button>
                     </div>
                 </li>
             </ul>
@@ -88,15 +132,34 @@
                         </button>
                     </div>
                     <div class="col-6 text-end">
-                        <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" title="Hanghívás indítása"><i class="bi bi-telephone-fill"></i></button>
-                        <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" title="Videóhívás indítása"><i class="bi bi-camera-video-fill"></i></button>
-                        <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" title="Beszélgetés adatai"><i class="bi bi-three-dots"></i></button>
+                        <div class="d-flex float-right">
+                            <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Hanghívás indítása"><i class="bi bi-telephone-fill"></i></button>
+                            <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Videóhívás indítása"><i class="bi bi-camera-video-fill"></i></button>
+                            <button id="id_btn_chat_data" type="button" class="btn btn-icon" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Beszélgetés adatai"><i class="bi bi-three-dots"></i></button>
+                        </div>
                     </div>
                 </div>
+
+                <div id="id_chat_history_search" class="px-2 d-none">
+                    <div class="input-group ps-2 my-2 search-input-group">         
+                        <i class="bi bi-search"></i>
+                        <input type="text" class="form-control" placeholder="Keresés..." aria-label="Search"
+                            aria-describedby="search-input">
+                        <button type="button" class="btn btn-icon">
+                            <i class="bi bi-arrow-up-circle-fill"></i>
+                        </button>
+                        <button type="button" class="btn btn-icon">
+                            <i class="bi bi-arrow-down-circle-fill"></i>
+                        </button>
+                        <button type="button" class="btn btn-icon">
+                            <i class="bi bi-x-circle-fill"></i>
+                        </button>
+                    </div>
+                </div>     
             </div>
             <div class="chat-history">
                 <ul class="mb-0">
-                    <li class="clearfix">
+                    <li>
                         <div class="message-data text-right">
                             <span class="message-data-time">10:10 AM, Today</span>
                             <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
@@ -104,13 +167,13 @@
                         <div class="message other-message float-right"> Hi Aiden, how are you? How is the
                             project coming along? </div>
                     </li>
-                    <li class="clearfix">
+                    <li>
                         <div class="message-data">
                             <span class="message-data-time">10:12 AM, Today</span>
                         </div>
                         <div class="message my-message">Are we meeting today?</div>
                     </li>
-                    <li class="clearfix">
+                    <li>
                         <div class="message-data">
                             <span class="message-data-time">10:15 AM, Today</span>
                         </div>
@@ -120,23 +183,23 @@
                 </ul>
             </div>
             <div class="chat-message d-flex pb-2">
-                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" title="Hangfájl küldése"><i class="bi bi-mic-fill"></i></button>
-                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" title="Fájl csatolása"><i class="bi bi-card-image"></i></button>
+                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Hangfájl küldése"><i class="bi bi-mic-fill"></i></button>
+                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Fájl csatolása"><i class="bi bi-card-image"></i></button>
                 <div class="input-group mb-0 search-input-group">
                     <input type="text" class="form-control message-input" placeholder="Aa" aria-label="Aa"
                         aria-describedby="aa-input">
-                    <div data-bs-toggle="tooltip" data-bs-title="Hangulatjel kiválasztása">
+                    <div data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Hangulatjel kiválasztása">
                         <a tabindex="0" role="button" class="btn btn-icon" data-bs-toggle="popover" data-bs-placement="top" 
                         data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_emoji">
                             <i class="bi bi-emoji-smile-fill"></i>
                         </a>
                     </div>
                 </div>
-                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" title="Küldés enterrel"><i class="bi bi-send-fill"></i></button>
+                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Küldés enterrel"><i class="bi bi-send-fill"></i></button>
             </div>
         </div>
     </div>
-    <div class="col-chat-right">
+    <div id="id_chat_data" class="col-chat-right">
         <div class="row">
             <div class="col-12">
                 <div class="d-flex flex-column align-items-center pt-2">
@@ -162,7 +225,7 @@
                                     <i class="bi bi-type"></i>
                                     Becenevek módosítása
                                 </button>
-                                <button class="btn btn-accordion" type="button">
+                                <button id="id_btn_chat_history_search" class="btn btn-accordion" type="button">
                                     <i class="bi bi-search"></i>
                                     Keresés a beszélgetésben
                                 </button>
