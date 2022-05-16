@@ -25,3 +25,39 @@ document
     }
     isOpenedChatHistorySearch = !isOpenedChatHistorySearch;
   });
+
+[].slice
+  .call(document.getElementsByClassName("btn btn-float"))
+  .forEach((element) => {
+    const li = element.parentElement.parentElement;
+
+    element.addEventListener("click", () => {
+      if (li.classList.contains("active")) {
+        return;
+      }
+      li.classList.add("active");
+    });
+
+    element.addEventListener("focusout", () => {
+      li.classList.remove("active");
+    });
+  });
+
+const peopleListItems = [].slice.call(
+  document.getElementsByClassName("people-list-item")
+);
+
+peopleListItems.forEach((element) => {
+  element.addEventListener("click", () => {
+    element.classList.add("active");
+    peopleListItems.forEach((otherElement) => {
+      if (otherElement === element) {
+        return;
+      }
+      if (otherElement.classList.contains("active")) {
+        otherElement.classList.remove("active");
+        return;
+      }
+    });
+  });
+});

@@ -193,7 +193,7 @@ button.btn-primary:active {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.btn-float {
+.btn-float, .btn-float:active, .btn-float:focus {
     width: 32px;
     height: 32px;
     border-radius: 100%;
@@ -202,11 +202,14 @@ button.btn-primary:active {
     justify-content: center;
     background-color: white !important;
     box-shadow: 2px 2px 4px 0px rgba(161, 161, 161, 1);
-    
 }
 
 .btn-float:hover {
     background-color: rgba(240, 240, 240, 1) !important;
+}
+
+.btn-float:active {
+    background-color: rgba(220, 220, 220, 1) !important;
 }
 
 .container-btn-float {
@@ -278,7 +281,7 @@ input:placeholder-shown .message-input {
 }
 
 .popover-body {
-    padding: 0.5rem;
+    padding: 0.25rem;
 }
 
 .popover-menu-list-item {
@@ -332,7 +335,8 @@ input:placeholder-shown .message-input {
     display: none;
 }
 
-.people-list li:hover .container-btn-float {
+.people-list li:hover .container-btn-float,
+.people-list li.active .container-btn-float {
     display: inline;
     position: absolute;
     left: 300px;
@@ -356,27 +360,33 @@ input:placeholder-shown .message-input {
     transition: .5s
 }
 
-.people-list .chat-list li {
+.people-list-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
     padding: 10px;
-    list-style: none;
-    border-radius: 8px;
     background-color: transparent;
     transition: background-color 0.2s;
 }
 
-.people-list .chat-list li:hover {
+.people-list-item:hover {
+    border-radius: 8px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, .05);
     transition: background-color 0s;
 }
 
-.people-list .chat-list li.active {
+.people-list-item:active {
+    background-color: rgba(0, 0, 0, .1);
+    transition: background-color 0s;
+}
+
+.people-list-item.active {
     background-color: rgba(0, 0, 0, .05);
 }
 
-.people-list .chat-list li:active {
-    background-color: rgba(0, 0, 0, .1);
-    transition: background-color 0s;
+.people-list .chat-list li {
+    list-style: none;
 }
 
 .people-list .chat-list li .name {

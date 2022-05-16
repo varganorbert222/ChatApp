@@ -1,7 +1,6 @@
 @page
 @model MessagesModel
 @{
-    ViewData["Title"] = "ChatApp";
     Layout = "_AfterLoginLayout";
 }
 
@@ -9,7 +8,8 @@
     <div class="col-chat-left">
         <div class="row px-2 mt-2 align-items-center">
             <div class="col-4">
-                <button type="button" class="btn btn-avatar" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_menu">
+                <button type="button" class="btn btn-avatar" data-bs-toggle="popover" data-bs-placement="bottom"
+                    data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_menu">
                     <img class="avatar-small" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
                 </button>
             </div>
@@ -17,10 +17,11 @@
                 <h6 class="m-0">Chatek</h6>
             </div>
             <div class="col-4">
-                <button type="button" class="btn btn-icon float-right" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Új üzenet írása"><i class="bi bi-pencil-square"></i></button>
+                <button type="button" class="btn btn-icon float-right" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                    title="Új üzenet írása"><i class="bi bi-pencil-square"></i></button>
             </div>
             <div class="col-12">
-                <div class="input-group px-2 mt-3 mb-2 search-input-group">         
+                <div class="input-group px-2 mt-3 mb-2 search-input-group">
                     <i class="bi bi-search"></i>
                     <input type="text" class="form-control" placeholder="Keresés..." aria-label="Search"
                         aria-describedby="search-input">
@@ -30,22 +31,23 @@
         <div id="plist" class="people-list">
             <ul class="list-unstyled chat-list mt-2 mb-0">
                 <li>
-                    <div class="d-flex align-items-center">
+                    <div class="people-list-item">
                         <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
                         <div class="about">
                             <div class="name">Vincent Porter</div>
                             <div class="status"> <i class="bi bi-circle-fill offline"></i> left 7 mins ago </div>
                         </div>
                     </div>
-                    
+
                     <div class="container-btn-float">
-                        <button type="button" class="btn btn-float">
+                        <button type="button" class="btn btn-float" data-bs-toggle="popover" data-bs-placement="bottom"
+                            data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_people_menu">
                             <i class="bi bi-three-dots"></i>
                         </button>
                     </div>
                 </li>
-                <li class="active">
-                    <div class="d-flex align-items-center">
+                <li>
+                    <div class="people-list-item active">
                         <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
                         <div class="about">
                             <div class="name">Aiden Chavez</div>
@@ -54,13 +56,14 @@
                     </div>
 
                     <div class="container-btn-float">
-                        <button type="button" class="btn btn-float">
+                        <button type="button" class="btn btn-float" data-bs-toggle="popover" data-bs-placement="bottom"
+                            data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_people_menu">
                             <i class="bi bi-three-dots"></i>
                         </button>
                     </div>
                 </li>
                 <li>
-                    <div class="d-flex align-items-center">
+                    <div class="people-list-item">
                         <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
                         <div class="about">
                             <div class="name">Mike Thomas</div>
@@ -68,13 +71,14 @@
                         </div>
                     </div>
                     <div class="container-btn-float">
-                        <button type="button" class="btn btn-float">
+                        <button type="button" class="btn btn-float" data-bs-toggle="popover" data-bs-placement="bottom"
+                            data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_people_menu">
                             <i class="bi bi-three-dots"></i>
                         </button>
                     </div>
                 </li>
                 <li>
-                    <div class="d-flex align-items-center">
+                    <div class="people-list-item">
                         <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
                         <div class="about">
                             <div class="name">Christian Kelly</div>
@@ -82,13 +86,14 @@
                         </div>
                     </div>
                     <div class="container-btn-float">
-                        <button type="button" class="btn btn-float">
+                        <button type="button" class="btn btn-float" data-bs-toggle="popover" data-bs-placement="bottom"
+                            data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_people_menu">
                             <i class="bi bi-three-dots"></i>
                         </button>
                     </div>
                 </li>
                 <li>
-                    <div class="d-flex align-items-center">
+                    <div class="people-list-item">
                         <img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="avatar">
                         <div class="about">
                             <div class="name">Monica Ward</div>
@@ -97,13 +102,14 @@
                     </div>
 
                     <div class="container-btn-float">
-                        <button type="button" class="btn btn-float">
+                        <button type="button" class="btn btn-float" data-bs-toggle="popover" data-bs-placement="bottom"
+                            data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_people_menu">
                             <i class="bi bi-three-dots"></i>
                         </button>
                     </div>
                 </li>
                 <li>
-                    <div class="d-flex align-items-center">
+                    <div class="people-list-item">
                         <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
                         <div class="about">
                             <div class="name">Dean Henry</div>
@@ -112,7 +118,8 @@
                     </div>
 
                     <div class="container-btn-float">
-                        <button type="button" class="btn btn-float">
+                        <button type="button" class="btn btn-float" data-bs-toggle="popover" data-bs-placement="bottom"
+                            data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_people_menu">
                             <i class="bi bi-three-dots"></i>
                         </button>
                     </div>
@@ -127,21 +134,25 @@
                     <div class="col-6">
                         <button type="button" class="btn btn-profile d-flex align-items-center">
                             <img class="avatar-small" src="https://bootdey.com/img/Content/avatar/avatar2.png"
-                                    alt="avatar">
+                                alt="avatar">
                             <h6 class="align-middle m-0 mx-2">Aiden Chavez</h6>
                         </button>
                     </div>
                     <div class="col-6 text-end">
                         <div class="d-flex float-right">
-                            <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Hanghívás indítása"><i class="bi bi-telephone-fill"></i></button>
-                            <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Videóhívás indítása"><i class="bi bi-camera-video-fill"></i></button>
-                            <button id="id_btn_chat_data" type="button" class="btn btn-icon" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Beszélgetés adatai"><i class="bi bi-three-dots"></i></button>
+                            <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                title="Hanghívás indítása"><i class="bi bi-telephone-fill"></i></button>
+                            <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                title="Videóhívás indítása"><i class="bi bi-camera-video-fill"></i></button>
+                            <button id="id_btn_chat_data" type="button" class="btn btn-icon" data-bs-toggle="tooltip"
+                                data-bs-trigger="hover" title="Beszélgetés adatai"><i
+                                    class="bi bi-three-dots"></i></button>
                         </div>
                     </div>
                 </div>
 
                 <div id="id_chat_history_search" class="px-2 d-none">
-                    <div class="input-group ps-2 my-2 search-input-group">         
+                    <div class="input-group ps-2 my-2 search-input-group">
                         <i class="bi bi-search"></i>
                         <input type="text" class="form-control" placeholder="Keresés..." aria-label="Search"
                             aria-describedby="search-input">
@@ -155,7 +166,7 @@
                             <i class="bi bi-x-circle-fill"></i>
                         </button>
                     </div>
-                </div>     
+                </div>
             </div>
             <div class="chat-history">
                 <ul class="mb-0">
@@ -183,19 +194,23 @@
                 </ul>
             </div>
             <div class="chat-message d-flex pb-2">
-                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Hangfájl küldése"><i class="bi bi-mic-fill"></i></button>
-                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Fájl csatolása"><i class="bi bi-card-image"></i></button>
+                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                    title="Hangfájl küldése"><i class="bi bi-mic-fill"></i></button>
+                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                    title="Fájl csatolása"><i class="bi bi-card-image"></i></button>
                 <div class="input-group mb-0 search-input-group">
                     <input type="text" class="form-control message-input" placeholder="Aa" aria-label="Aa"
                         aria-describedby="aa-input">
                     <div data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Hangulatjel kiválasztása">
-                        <a tabindex="0" role="button" class="btn btn-icon" data-bs-toggle="popover" data-bs-placement="top" 
-                        data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_emoji">
+                        <a tabindex="0" role="button" class="btn btn-icon" data-bs-toggle="popover"
+                            data-bs-placement="top" data-bs-offset="10,20" data-bs-trigger="focus"
+                            data-content-id="id_popover_emoji">
                             <i class="bi bi-emoji-smile-fill"></i>
                         </a>
                     </div>
                 </div>
-                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Küldés enterrel"><i class="bi bi-send-fill"></i></button>
+                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                    title="Küldés enterrel"><i class="bi bi-send-fill"></i></button>
             </div>
         </div>
     </div>
@@ -215,11 +230,13 @@
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Chat testreszabása
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <button class="btn btn-accordion" type="button">
                                     <i class="bi bi-type"></i>
@@ -234,11 +251,13 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Médiatartalom és fájlok
                             </button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <button class="btn btn-accordion" type="button">
                                     <i class="bi bi-images"></i>
@@ -253,11 +272,13 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Személyes adatok védelme és támogatás
                             </button>
                         </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <button class="btn btn-accordion" type="button">
                                     <i class="bi bi-bell-slash-fill"></i>
@@ -287,7 +308,7 @@
             <i class="bi bi-gear-fill"></i>
         </div>
         <span>Beállítások</span>
-    </a> 
+    </a>
     <hr>
     <a class="popover-menu-list-item" asp-area="Identity" asp-page="/Account/Manage/Index">
         <div class="circle">
@@ -317,7 +338,7 @@
             <i class="bi bi-gear-fill"></i>
         </div>
         <span>Beállítások</span>
-    </a> 
+    </a>
     <hr>
     <a class="popover-menu-list-item" asp-area="Identity" asp-page="/Account/Manage/Index">
         <div class="circle">
@@ -337,5 +358,53 @@
             <i class="bi bi-door-open-fill"></i>
         </div>
         <span>Kijelentkezés</span>
+    </a>
+</div>
+
+<!-- popover people menu content -->
+<div id="id_popover_people_menu" class="d-none">
+    <a href="#" class="popover-menu-list-item">
+        <div class="circle">
+            <i class="bi bi-check2"></i>
+        </div>
+        <span>Megjelölés olvasatlanként</span>
+    </a>
+    <a href="#" class="popover-menu-list-item">
+        <div class="circle">
+            <i class="bi bi-bell-slash-fill"></i>
+        </div>
+        <span>Értesítések némítása</span>
+    </a>
+    <a href="#" class="popover-menu-list-item">
+        <div class="circle">
+            <i class="bi bi-person-fill"></i>
+        </div>
+        <span>Profil megtekintése</span>
+    </a>
+    <hr>
+    <a href="#" class="popover-menu-list-item" href="#">
+        <div class="circle">
+            <i class="bi bi-telephone-fill"></i>
+        </div>
+        <span>Hanghívás</span>
+    </a>
+    <a href="#" class="popover-menu-list-item">
+        <div class="circle">
+            <i class="bi bi-camera-video-fill"></i>
+        </div>
+        <span>Videóhívás</span>
+    </a>
+    <hr>
+    <a href="#" class="popover-menu-list-item" href="#">
+        <div class="circle">
+            <i class="bi bi-archive-fill"></i>
+        </div>
+        <span>Chat archiválása</span>
+    </a>
+    <a href="#" class="popover-menu-list-item">
+        <div class="circle">
+            <i class="bi bi-trash-fill"></i>
+        </div>
+        <span>Chat törlése</span>
     </a>
 </div>
