@@ -12,6 +12,8 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl, {
       content: contentEl,
       html: true,
+      container: "body",
+      sanitize: false,
     });
   } else {
     //do something else cause data-content-id isn't there.

@@ -8,7 +8,7 @@
     <div class="col-chat-left">
         <div class="row px-2 mt-2 align-items-center">
             <div class="col-4">
-                <button type="button" class="btn btn-avatar" data-bs-toggle="popover" data-bs-placement="bottom"
+                <button id="id_avatar_menu_button" type="button" class="btn btn-avatar" data-bs-toggle="popover" data-bs-placement="bottom"
                     data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_menu">
                     <img class="avatar-small" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
                 </button>
@@ -218,7 +218,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="d-flex flex-column align-items-center pt-2">
-                    <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_info">
                         <img class="avatar-large" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
                     </a>
                     <h6 class="align-middle m-0 mx-2">Aiden Chavez</h6>
@@ -303,7 +303,7 @@
 
 <!-- popover menu content -->
 <div id="id_popover_menu" class="d-none">
-    <a href="#" class="popover-menu-list-item">
+    <a role="button" data-bs-toggle="modal" data-bs-target="#id_settings_modal" class="popover-menu-list-item">
         <div class="circle">
             <i class="bi bi-gear-fill"></i>
         </div>
@@ -414,4 +414,23 @@
         </div>
         <span>Chat törlése</span>
     </a>
+</div>
+
+<!-- Settings modal -->
+<div class="modal fade" id="id_settings_modal" tabindex="-1" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Test
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
