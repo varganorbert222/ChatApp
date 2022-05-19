@@ -71,3 +71,30 @@ a:hover {
 .form-switch {
   cursor: pointer;
 }
+
+.form-switch .form-check-input {
+  height: 22px;
+  width: 44px;
+}
+
+.modal-content {
+  border-radius: 12px;
+}
+
+.modal-header {
+  display: block;
+}
+
+.modal-header,
+.modal .modal-footer {
+  border: none;
+}
+
+.modal-header .btn-close {
+  margin: 0;
+  text-align: right;
+}
+
+.modal-body {
+  padding: 1rem;
+}

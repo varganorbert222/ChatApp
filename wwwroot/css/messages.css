@@ -153,7 +153,6 @@ button.btn-primary:active {
     width: 36px;
     height: 36px;
     border-radius: 100%;
-    color: #0d6efd;
     background-color: transparent;
     transition: background-color 0.2s;
 }
@@ -164,9 +163,28 @@ button.btn-primary:active {
 }
 
 .btn-icon:hover {
-    color: #0d6efd;
     background-color: rgba(0, 0, 0, 0.05);
     transition: background-color 0s;
+}
+
+.btn-icon-blue {
+    color: #0d6efd;
+}
+
+.btn-icon-blue:hover {
+    color: #0d6efd;
+}
+
+.btn-icon-grey {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.btn-icon-grey:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-icon-grey:active {
+    background-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 .btn-profile {
@@ -284,6 +302,14 @@ input:placeholder-shown .message-input {
     padding: 0.25rem;
 }
 
+.btn-list-item {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
 .popover-menu-list-item {
     display: flex;
     align-items: center;
@@ -305,7 +331,14 @@ input:placeholder-shown .message-input {
     transition: background-color 0s;
 }
 
-.popover-menu-list-item .circle {
+.popover-menu-list-item span {
+    font-size: .9375rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.circle-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -314,14 +347,7 @@ input:placeholder-shown .message-input {
     width: 30px;
     height: 30px;
     border-radius: 30px;
-    background-color: #e8f1f3;
-}
-
-.popover-menu-list-item span {
-    font-size: .9375rem;
-    font-weight: 500;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .people-list li {

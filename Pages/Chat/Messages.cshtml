@@ -8,8 +8,9 @@
     <div class="col-chat-left">
         <div class="row px-2 mt-2 align-items-center">
             <div class="col-4">
-                <button id="id_avatar_menu_button" type="button" class="btn btn-avatar" data-bs-toggle="popover" data-bs-placement="bottom"
-                    data-bs-offset="10,20" data-bs-trigger="focus" data-content-id="id_popover_menu">
+                <button id="id_avatar_menu_button" type="button" class="btn btn-avatar" data-bs-toggle="popover"
+                    data-bs-placement="bottom" data-bs-offset="10,20" data-bs-trigger="focus"
+                    data-content-id="id_popover_menu">
                     <img class="avatar-small" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
                 </button>
             </div>
@@ -17,8 +18,8 @@
                 <h6 class="m-0">Chatek</h6>
             </div>
             <div class="col-4">
-                <button type="button" class="btn btn-icon float-right" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                    title="Új üzenet írása"><i class="bi bi-pencil-square"></i></button>
+                <button type="button" class="btn btn-icon btn-icon-blue float-right" data-bs-toggle="tooltip"
+                    data-bs-trigger="hover" title="Új üzenet írása"><i class="bi bi-pencil-square"></i></button>
             </div>
             <div class="col-12">
                 <div class="input-group px-2 mt-3 mb-2 search-input-group">
@@ -140,12 +141,14 @@
                     </div>
                     <div class="col-6 text-end">
                         <div class="d-flex float-right">
-                            <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                title="Hanghívás indítása"><i class="bi bi-telephone-fill"></i></button>
-                            <button type="button" class="btn btn-icon" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                title="Videóhívás indítása"><i class="bi bi-camera-video-fill"></i></button>
-                            <button id="id_btn_chat_data" type="button" class="btn btn-icon" data-bs-toggle="tooltip"
-                                data-bs-trigger="hover" title="Beszélgetés adatai"><i
+                            <button type="button" class="btn btn-icon btn-icon-blue" data-bs-toggle="tooltip"
+                                data-bs-trigger="hover" title="Hanghívás indítása"><i
+                                    class="bi bi-telephone-fill"></i></button>
+                            <button type="button" class="btn btn-icon btn-icon-blue" data-bs-toggle="tooltip"
+                                data-bs-trigger="hover" title="Videóhívás indítása"><i
+                                    class="bi bi-camera-video-fill"></i></button>
+                            <button id="id_btn_chat_data" type="button" class="btn btn-icon btn-icon-blue"
+                                data-bs-toggle="tooltip" data-bs-trigger="hover" title="Beszélgetés adatai"><i
                                     class="bi bi-three-dots"></i></button>
                         </div>
                     </div>
@@ -156,13 +159,13 @@
                         <i class="bi bi-search"></i>
                         <input type="text" class="form-control" placeholder="Keresés..." aria-label="Search"
                             aria-describedby="search-input">
-                        <button type="button" class="btn btn-icon">
+                        <button type="button" class="btn btn-icon btn-icon-blue">
                             <i class="bi bi-arrow-up-circle-fill"></i>
                         </button>
-                        <button type="button" class="btn btn-icon">
+                        <button type="button" class="btn btn-icon btn-icon-blue">
                             <i class="bi bi-arrow-down-circle-fill"></i>
                         </button>
-                        <button type="button" class="btn btn-icon">
+                        <button type="button" class="btn btn-icon btn-icon-blue">
                             <i class="bi bi-x-circle-fill"></i>
                         </button>
                     </div>
@@ -194,23 +197,23 @@
                 </ul>
             </div>
             <div class="chat-message d-flex pb-2">
-                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                    title="Hangfájl küldése"><i class="bi bi-mic-fill"></i></button>
-                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                    title="Fájl csatolása"><i class="bi bi-card-image"></i></button>
+                <button type="button" class="btn btn-icon btn-icon-blue mx-1" data-bs-toggle="tooltip"
+                    data-bs-trigger="hover" title="Hangfájl küldése"><i class="bi bi-mic-fill"></i></button>
+                <button type="button" class="btn btn-icon btn-icon-blue mx-1" data-bs-toggle="tooltip"
+                    data-bs-trigger="hover" title="Fájl csatolása"><i class="bi bi-card-image"></i></button>
                 <div class="input-group mb-0 search-input-group">
                     <input type="text" class="form-control message-input" placeholder="Aa" aria-label="Aa"
                         aria-describedby="aa-input">
                     <div data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-title="Hangulatjel kiválasztása">
-                        <a tabindex="0" role="button" class="btn btn-icon" data-bs-toggle="popover"
+                        <a tabindex="0" role="button" class="btn btn-icon btn-icon-blue" data-bs-toggle="popover"
                             data-bs-placement="top" data-bs-offset="10,20" data-bs-trigger="focus"
                             data-content-id="id_popover_emoji">
                             <i class="bi bi-emoji-smile-fill"></i>
                         </a>
                     </div>
                 </div>
-                <button type="button" class="btn btn-icon mx-1" data-bs-toggle="tooltip" data-bs-trigger="hover"
-                    title="Küldés enterrel"><i class="bi bi-send-fill"></i></button>
+                <button type="button" class="btn btn-icon btn-icon-blue mx-1" data-bs-toggle="tooltip"
+                    data-bs-trigger="hover" title="Küldés enterrel"><i class="bi bi-send-fill"></i></button>
             </div>
         </div>
     </div>
@@ -304,34 +307,34 @@
 <!-- popover menu content -->
 <div id="id_popover_menu" class="d-none">
     <a role="button" data-bs-toggle="modal" data-bs-target="#id_settings_modal" class="popover-menu-list-item">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-gear-fill"></i>
         </div>
         <span>Beállítások</span>
     </a>
     <hr>
     <a class="popover-menu-list-item" asp-area="Identity" asp-page="/Account/Manage/Index">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-person-fill"></i>
         </div>
         <span>Profilom</span>
     </a>
     <a class="popover-menu-list-item" href="#">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-archive-fill"></i>
         </div>
         <span>Archivált chatek</span>
     </a>
     <hr>
-    <a class="popover-menu-list-item" href="#">
-        <div class="circle">
+    <a role="button" data-bs-toggle="modal" data-bs-target="#id_about_modal" class="popover-menu-list-item">
+        <div class="circle-icon">
             <i class="bi bi-info-circle-fill"></i>
         </div>
         <span>Névjegy</span>
     </a>
     <hr>
     <a class="popover-menu-list-item" asp-area="Identity" asp-page="/Account/Logout">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-door-open-fill"></i>
         </div>
         <span>Kijelentkezés</span>
@@ -340,76 +343,51 @@
 
 <!-- popover emoji content -->
 <div id="id_popover_emoji" class="d-none">
-    <a href="#" class="popover-menu-list-item">
-        <div class="circle">
-            <i class="bi bi-gear-fill"></i>
-        </div>
-        <span>Beállítások</span>
-    </a>
-    <hr>
-    <a class="popover-menu-list-item" asp-area="Identity" asp-page="/Account/Manage/Index">
-        <div class="circle">
-            <i class="bi bi-person-fill"></i>
-        </div>
-        <span>Profilom</span>
-    </a>
-    <a class="popover-menu-list-item" href="#">
-        <div class="circle">
-            <i class="bi bi-archive-fill"></i>
-        </div>
-        <span>Archivált chatek</span>
-    </a>
-    <hr>
-    <a class="popover-menu-list-item" asp-area="Identity" asp-page="/Account/Logout">
-        <div class="circle">
-            <i class="bi bi-door-open-fill"></i>
-        </div>
-        <span>Kijelentkezés</span>
-    </a>
+    <h1>Teszt...</h1>
 </div>
 
 <!-- popover people menu content -->
 <div id="id_popover_people_menu" class="d-none">
     <a href="#" class="popover-menu-list-item">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-check2"></i>
         </div>
         <span>Megjelölés olvasatlanként</span>
     </a>
     <a href="#" class="popover-menu-list-item">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-bell-slash-fill"></i>
         </div>
         <span>Értesítések némítása</span>
     </a>
     <a href="#" class="popover-menu-list-item">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-person-fill"></i>
         </div>
         <span>Profil megtekintése</span>
     </a>
     <hr>
     <a href="#" class="popover-menu-list-item" href="#">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-telephone-fill"></i>
         </div>
         <span>Hanghívás</span>
     </a>
     <a href="#" class="popover-menu-list-item">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-camera-video-fill"></i>
         </div>
         <span>Videóhívás</span>
     </a>
     <hr>
     <a href="#" class="popover-menu-list-item" href="#">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-archive-fill"></i>
         </div>
         <span>Chat archiválása</span>
     </a>
     <a href="#" class="popover-menu-list-item">
-        <div class="circle">
+        <div class="circle-icon">
             <i class="bi bi-trash-fill"></i>
         </div>
         <span>Chat törlése</span>
@@ -417,20 +395,101 @@
 </div>
 
 <!-- Settings modal -->
-<div class="modal fade" id="id_settings_modal" tabindex="-1" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Test
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+<div class="modal fade" id="id_settings_modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header px-0">
+                <div class="row mx-0 align-items-center">
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        <h6 class="modal-title text-center" id="exampleModalLabel">Beállítások</h6>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-icon btn-icon-grey float-end" data-bs-dismiss="modal"
+                            aria-label="Close">
+                            <i class="bi bi-x-circle-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body pb-5">
+                <h6>Fiók</h6>
+                <a class="popover-menu-list-item h-auto p-1" asp-area="Identity" asp-page="/Account/Manage/Index">
+                    <img class="avatar-large" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                    <div class="mx-2">
+                        <h6 class="align-middle m-0">Aiden Chavez</h6>
+                        <div class="text-muted">A profilod megjelenítése</div>
+                    </div>
+                </a>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="circle-icon">
+                            <i class="bi bi-app-indicator"></i>
+                        </div>
+                        <h6 class="mx-2 my-0">Elérhető állapot</h6>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="circle-icon">
+                            <i class="bi bi-volume-up-fill"></i>
+                        </div>
+                        <h6 class="mx-2 my-0">Értesítések hangjai</h6>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
+
+<!-- About modal -->
+<div class="modal fade" id="id_about_modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header px-0">
+                <div class="row mx-0 align-items-center">
+                    <div class="col">
+                    </div>
+                    <div class="col">
+                        <h6 class="modal-title text-center" id="exampleModalLabel">Névjegy</h6>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-icon btn-icon-grey float-end" data-bs-dismiss="modal"
+                            aria-label="Close">
+                            <i class="bi bi-x-circle-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body pb-5">
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                    <div class="bi bi-chat-dots-fill login-logo py-1"></div>
+                    <h5>Csevegés bárhol és bármikor</h5>
+                    <div class="text-muted py-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <div class="text-muted">
+                    <span>@DateTime.Now.Year - varganorbert222</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
