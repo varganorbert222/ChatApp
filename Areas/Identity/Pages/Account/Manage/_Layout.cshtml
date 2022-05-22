@@ -9,20 +9,30 @@
     }
 }
 
-<h1>Manage your account</h1>
 
-<div>
-    <h2>Change your account settings</h2>
-    <hr />
-    <div class="row">
-        <div class="col-md-3">
+<div style="height: 100vh;">
+    <div class="text-center pt-5 pb-3">
+        <h1>Fiók kezelése</h1>
+        <h2>A fiókbeállítások módosítása</h2>
+        <div class="d-flex align-items-center justify-content-center pt-2">
             <partial name="_ManageNav" />
         </div>
-        <div class="col-md-9">
+    </div>
+    <div class="container shadow p-3 bg-body border-radius-1 h-50" style="max-width: 60vh;">
+        <div class="d-flex flex-column justify-content-center align-items-center">
             @RenderBody()
         </div>
     </div>
+    <div class="text-center pt-5">
+        <a href="/Chat/Messages" class="btn btn-primary btn-rounded">Vissza a beszélgetésbe</a>
+    </div>
 </div>
+
+<footer class="footer text-center text-muted fixed-bottom pb-3">
+    <div class="container">
+        &copy; @DateTime.Now.Year - ChatApp
+    </div>
+</footer>
 
 @section Scripts {
 @RenderSection("Scripts", required: false)

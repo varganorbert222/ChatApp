@@ -20,6 +20,53 @@
     url("/fonts/bootstrap-icons.woff?524846017b983fc8ded9325d94ed40f3") format("woff");
 }
 
+button.btn {
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+
+button.btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: background-color 0s;
+}
+
+button.btn:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 0s;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+button.btn-primary,
+a.btn-primary {
+  background-color: #0d6efd;
+  transition: background-color 0.2s;
+}
+
+button.btn-primary:hover,
+a.btn-primary:hover {
+  background-color: #4d4dff;
+  transition: background-color 0s;
+}
+
+button.btn-primary:active,
+a.btn-primary:active {
+  background-color: hsl(240, 100%, 45%);
+  transition: background-color 0s;
+}
+
+.btn-check:active+.btn-primary:focus,
+.btn-check:checked+.btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
 .input-validation-error {
   border-color: #dc3545;
   padding-right: calc(1.5em + .75rem);
@@ -35,11 +82,12 @@ input.form-control {
   border-radius: 25px !important;
   border: none;
   align-self: center;
-  background-color: rgba(0, 0, 0, .05);;
+  background-color: rgba(0, 0, 0, .05);
 }
 
 input.form-control:focus {
-  background-color: rgba(0, 0, 0, .05);;
+  background-color: rgba(0, 0, 0, .05);
+  ;
   border-color: none;
   box-shadow: none;
 }
@@ -58,14 +106,17 @@ a:hover {
   text-decoration: underline;
 }
 
+a.btn {
+  text-decoration: none;
+}
+
 .login-logo {
   font-size: 5rem;
   color: #0d6efd;
 }
 
-.exclamation {
+.icon-large {
   font-size: 5rem;
-  color: #dc3545;
 }
 
 .form-switch {
@@ -97,4 +148,26 @@ a:hover {
 
 .modal-body {
   padding: 1rem;
+}
+
+.border-radius-1 {
+  border-radius: 1rem;
+}
+
+.validation-summary-valid {
+  display: none;
+}
+
+.validation-summary-errors>ul {
+  list-style: none;
+  text-align: left;
+}
+
+.validation-summary-errors>ul li::before {
+  font-family: 'bootstrap-icons';
+  content: "\F33B";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
 }

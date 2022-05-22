@@ -2,22 +2,35 @@
 @model RegisterConfirmationModel
 @{
     ViewData["Title"] = "Register confirmation";
+    Layout = "_BeforeLoginLayout";
 }
 
-<h1>@ViewData["Title"]</h1>
-@{
-    if (@Model.DisplayConfirmAccountLink)
-    {
-<p>
-    This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
-    Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
-</p>
-    }
-    else
-    {
-<p>
-        Please check your email to confirm your account.
-</p>
-    }
-}
-
+<div class="d-flex align-items-center justify-content-center" style="min-height: 85vh;">
+    <div
+        class="d-flex flex-column justify-content-center align-items-center text-center shadow p-5 bg-body border-radius-1">
+        <div class="icon-large text-success p-3">
+            <i class="bi bi-clipboard-check-fill"></i>
+        </div>
+        <div class="pb-5">
+            <h1>Sikeres regisztráció.</h1>
+            @{
+                if (@Model.DisplayConfirmAccountLink)
+                {
+                    <p>
+                        This app does not currently have a real email sender registered, see <a
+                        href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
+                        Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to
+                            confirm your account</a>
+                    </p>
+                }
+                else
+                {
+                    <p>Kérlek ellenőrizd az e-mail fiókod, és hajts végre a benne található utasításokat!</p>
+                }
+            }
+        </div>
+        <div class="mt-5">
+            <a href="/" class="btn btn-lg btn-primary btn-rounded text-white text-decoration-none">Vissza</a>
+        </div>
+    </div>
+</div>

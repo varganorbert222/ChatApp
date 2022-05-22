@@ -1,0 +1,8 @@
+﻿@model string
+
+@if (!String.IsNullOrEmpty(Model))
+{
+    var statusMessageClass = Model.StartsWith("Hiba") || Model.StartsWith("Error") ? "danger" :
+    "success";
+    <h2 class="text-@statusMessageClass">@Model</h2>
+}
