@@ -26,11 +26,13 @@ button.btn {
 }
 
 button.btn:hover {
+  border: none;
   background-color: rgba(0, 0, 0, 0.05);
   transition: background-color 0s;
 }
 
 button.btn:active {
+  border: none;
   background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0s;
 }
@@ -39,23 +41,33 @@ button.btn:active {
 .btn:focus {
   outline: none;
   box-shadow: none;
+  border: none;
+}
+
+.nav-link {
+  color: #0d6efd;
+  background-color: white;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 button.btn-primary,
 a.btn-primary {
-  background-color: #0d6efd;
+  background-color: #0d6efd !important;
   transition: background-color 0.2s;
 }
 
 button.btn-primary:hover,
-a.btn-primary:hover {
-  background-color: #4d4dff;
-  transition: background-color 0s;
+a.btn-primary:hover,
+.nav-link:hover {
+  color: white;
+  background-color: #4d4dff !important;
+  transition: background-color 0s, color 0s;
 }
 
 button.btn-primary:active,
-a.btn-primary:active {
-  background-color: hsl(240, 100%, 45%);
+a.btn-primary:active,
+.nav-link:active {
+  background-color: hsl(240, 100%, 45%) !important;
   transition: background-color 0s;
 }
 
@@ -90,10 +102,6 @@ input.form-control:focus {
   ;
   border-color: none;
   box-shadow: none;
-}
-
-.btn.btn-rounded {
-  border-radius: 50px;
 }
 
 a {

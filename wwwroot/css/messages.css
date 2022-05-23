@@ -126,12 +126,11 @@ html {
     transition: background-color 0s;
 }
 
-.btn-icon-blue {
-    color: #0d6efd;
-}
-
-.btn-icon-blue:hover {
-    color: #0d6efd;
+.btn-icon-blue,
+.btn-icon-blue:hover,
+.btn-icon-blue:focus {
+    color: #0d6efd !important;
+    border: none;
 }
 
 .btn-icon-grey {
