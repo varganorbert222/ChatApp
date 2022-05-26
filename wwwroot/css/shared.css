@@ -26,13 +26,11 @@ button.btn {
 }
 
 button.btn:hover {
-  border: none;
   background-color: rgba(0, 0, 0, 0.05);
   transition: background-color 0s;
 }
 
 button.btn:active {
-  border: none;
   background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0s;
 }
@@ -41,7 +39,6 @@ button.btn:active {
 .btn:focus {
   outline: none;
   box-shadow: none;
-  border: none;
 }
 
 .nav-link {

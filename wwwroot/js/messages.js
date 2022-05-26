@@ -26,6 +26,14 @@ document
     isOpenedChatHistorySearch = !isOpenedChatHistorySearch;
   });
 
+document
+  .getElementById("id_btn_chat_messages_search")
+  .addEventListener("click", () => {
+    const input = document.getElementById("id_input_chat_search");
+    input.value = null;
+    input.focus();
+  });
+
 [].slice
   .call(document.getElementsByClassName("btn btn-float"))
   .forEach((element) => {
