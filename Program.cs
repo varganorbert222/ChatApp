@@ -3,28 +3,41 @@ using Microsoft.EntityFrameworkCore;
 using ChatApp.Areas.Identity.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-var usedConnection = builder.Configuration.GetRequiredSection("UsedConnection").Value;
+var usedConnection = builder.Configuration.GetSection("UsedConnection").Value;
+var connections = builder.Configuration.GetSection("ConnectionStrings").GetChildren();
 
-if (usedConnection == "PostgreSQLConnection")
+foreach (var connection in connections)
 {
-  builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-          .AddEntityFrameworkStores<ChatAppIdentityPostgreDbContext>();
-  builder.Services.AddDbContext<ChatAppIdentityPostgreDbContext>(options =>
-      options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQLConnection")));
-}
-else if (usedConnection == "OracleConnection")
-{
-  builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-      .AddEntityFrameworkStores<ChatAppIdentityOracleDbContext>();
-  builder.Services.AddDbContext<ChatAppIdentityOracleDbContext>(options =>
-      options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
-}
-else
-{
-  builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-      .AddEntityFrameworkStores<ChatAppIdentityMSSQLDbContext>();
-  builder.Services.AddDbContext<ChatAppIdentityMSSQLDbContext>(options =>
-      options.UseSqlServer(builder.Configuration.GetConnectionString("MSSQLConnection")));
+  var connectionName = connection.Key;
+  var connectionString = connection.Value;
+
+  if (connectionName == usedConnection)
+  {
+    if (usedConnection == "Npgsql")
+    {
+      builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ChatAppIdentityPostgreDbContext>();
+      builder.Services.AddDbContext<ChatAppIdentityPostgreDbContext>(options =>
+        options.UseNpgsql(connectionString));
+            break;
+    }
+    else if (usedConnection == "Oracle")
+    {
+      builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ChatAppIdentityOracleDbContext>();
+      builder.Services.AddDbContext<ChatAppIdentityOracleDbContext>(options =>
+        options.UseOracle(connectionString));
+            break;
+    }
+    else
+    {
+      builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ChatAppIdentityMSSQLDbContext>();
+      builder.Services.AddDbContext<ChatAppIdentityMSSQLDbContext>(options =>
+        options.UseSqlServer(connectionString));
+            break;
+    }
+  }
 }
 
 // Add services to the container.
