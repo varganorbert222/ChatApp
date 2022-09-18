@@ -19,7 +19,6 @@ foreach (var connection in connections)
         .AddEntityFrameworkStores<ChatAppIdentityPostgreDbContext>();
       builder.Services.AddDbContext<ChatAppIdentityPostgreDbContext>(options =>
         options.UseNpgsql(connectionString));
-            break;
     }
     else if (usedConnection == "Oracle")
     {
@@ -27,7 +26,6 @@ foreach (var connection in connections)
         .AddEntityFrameworkStores<ChatAppIdentityOracleDbContext>();
       builder.Services.AddDbContext<ChatAppIdentityOracleDbContext>(options =>
         options.UseOracle(connectionString));
-            break;
     }
     else
     {
@@ -35,7 +33,6 @@ foreach (var connection in connections)
         .AddEntityFrameworkStores<ChatAppIdentityMSSQLDbContext>();
       builder.Services.AddDbContext<ChatAppIdentityMSSQLDbContext>(options =>
         options.UseSqlServer(connectionString));
-            break;
     }
   }
 }
